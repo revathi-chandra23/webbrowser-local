@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <i> timer </i>
+    <h1> </h1>
+    <button onclick="start()"> start </button>
+    <button onclick="stop()"> stop </button>
+    
+</body>
+</html>
+<script>
+let i=0;
+let id
+
+function start(){
+id =setInterval(function(){
+  i++;
+  console.log(i);
+  document.querySelector("h1").innerText=i;
+},1000);
+}
+  function stop()
+  {
+    clearInterval(id);
+  }
+</script>
