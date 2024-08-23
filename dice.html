@@ -23,6 +23,8 @@
     <div class="dice" id="member-2"></div>
     <div class="dice" id="member-3"></div>
     <button onclick="rollDice()">ROLL THE DICE</button>
+   
+    
 
     <script>
         function rollDice() {
@@ -39,6 +41,8 @@
             document.getElementById('member-3').style.backgroundColor = scores[2] === maxScore ? 'green' : scores[2] === minScore ? 'red' : 'yellow';
 
             document.getElementById('winner').textContent = 'Member ' + (scores.indexOf(maxScore) + 1) + ' wins!';
+            setInterval(rollDice, 2000); // Roll dice every 2 seconds
+
         }
     </script>
 </body>
